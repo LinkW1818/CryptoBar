@@ -12,23 +12,9 @@ Lightweight macOS menu bar app for real-time cryptocurrency price monitoring.
 - Monospaced digit font for clean display
 - Pure menu bar app — no Dock icon
 
-## Screenshot
+## Demo
 
-```
-┌──────────────────────────────────────────────────────┐
-│ Menu Bar:  BTC $84,230 | ETH $3,210                  │
-├──────────────────────────────────────────────────────┤
-│  BTC  $84,230   +2.35%                               │
-│  ETH  $3,210    -0.87%                                │
-│ ──────────────────────                                │
-│  Refresh: 30s                                         │
-│ ──────────────────────                                │
-│  Refresh Now              ⌘R                          │
-│  Reload Config (~/.crypto.json)                       │
-│ ──────────────────────                                │
-│  Quit CryptoBar           ⌘Q                          │
-└──────────────────────────────────────────────────────┘
-```
+![CryptoBar Demo](demo.jpg)
 
 ## Installation
 
