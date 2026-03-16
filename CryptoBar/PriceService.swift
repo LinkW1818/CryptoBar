@@ -31,9 +31,12 @@ class PriceService {
         do {
             let (data, _) = try await session.data(from: url)
             let tickers = try JSONDecoder().decode([Ticker24hr].self, from: data)
+            let tickerMap = Dictionary(uniqueKeysWithValues: tickers.map { ($0.symbol, $0) })
 
-            return zip(symbols, tickers).map { symbol, ticker in
-                PriceData(
+            return symbols.compactMap { symbol in
+                let pair = tradingPair(for: symbol, currency: currency)
+                guard let ticker = tickerMap[pair] else { return nil }
+                return PriceData(
                     symbol: symbol.uppercased(),
                     price: Double(ticker.lastPrice) ?? 0,
                     change24h: Double(ticker.priceChangePercent)
