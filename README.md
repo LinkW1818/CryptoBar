@@ -14,7 +14,7 @@ Lightweight macOS menu bar app for real-time cryptocurrency price monitoring.
 
 ## Demo
 
-![CryptoBar Demo](demo.jpg)
+![CryptoBar Demo](Img/demo.jpg)
 
 ## Installation
 

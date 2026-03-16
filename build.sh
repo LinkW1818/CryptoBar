@@ -8,8 +8,10 @@ swift build -c release
 
 # Create .app bundle
 APP_DIR="CryptoBar.app/Contents/MacOS"
-mkdir -p "$APP_DIR"
+RES_DIR="CryptoBar.app/Contents/Resources"
+mkdir -p "$APP_DIR" "$RES_DIR"
 cp .build/release/CryptoBar "$APP_DIR/"
+cp CryptoBar/Assets/AppIcon.icns "$RES_DIR/"
 
 # Create Info.plist
 cat > CryptoBar.app/Contents/Info.plist << 'PLIST'
@@ -29,6 +31,8 @@ cat > CryptoBar.app/Contents/Info.plist << 'PLIST'
     <string>CryptoBar</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>LSUIElement</key>
     <true/>
     <key>NSAppTransportSecurity</key>
