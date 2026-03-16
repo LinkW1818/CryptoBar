@@ -37,7 +37,7 @@ Lightweight macOS menu bar app for real-time cryptocurrency price monitoring.
 Requires **macOS 13+** and **Swift 5.9+** (Xcode 15+).
 
 ```bash
-git clone https://github.com/YourUsername/CryptoBar.git
+git clone https://github.com/LinkW1818/CryptoBar.git
 cd CryptoBar
 chmod +x build.sh
 ./build.sh
